@@ -7,6 +7,8 @@
 int main() {
     LedController controller;
     controller.setBPM(180);
-    controller.runSequence();
+    while (true) {
+        controller.runSequence();
+    }
     return 0;
 }
