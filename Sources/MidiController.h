@@ -7,6 +7,8 @@
 
 #include <iostream>
 #include <vector>
+#include <thread>
+#include <chrono>
 
 #include "RtMidi.h"
 
@@ -26,7 +28,6 @@ public:
     // Méthodes communes à tous les appareils MIDI
     virtual void sendNoteOn(int note, int velocity);
     virtual void sendNoteOff(int note);
-
 private:
     RtMidiIn *midiin;
     RtMidiOut *midiout;

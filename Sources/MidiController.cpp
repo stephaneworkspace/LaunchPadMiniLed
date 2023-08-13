@@ -53,6 +53,7 @@ bool MidiController::setup(int port)
     midiin->setCallback(&MidiController::mycallback, this);
     midiin->ignoreTypes(true, true, true);
     midiin->openPort(port);
+
     return true;
 }
 

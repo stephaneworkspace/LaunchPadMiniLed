@@ -19,7 +19,7 @@ void signalHandler(int signum) { done = true; }
 int main()
 {
     // Pour de l'appareil
-    const int PORT = 1;
+    const int PORT = 10;
     const bool SHOW_MESSAGE = true;
 
     signal(SIGINT, signalHandler);
@@ -31,7 +31,6 @@ int main()
         std::cout << "Erreur lors de la configuration du contrôleur MIDI." <<
 std::endl; return 1;
     }
-
     while (!done)
     {
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
