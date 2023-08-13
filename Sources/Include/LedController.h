@@ -5,7 +5,7 @@
 #ifndef LED_CONTROLLER_H
 #define LED_CONTROLLER_H
 
-#include <RtMidi.h>
+#include "RtMidi.h"
 #include <vector>
 
 class LedController {
