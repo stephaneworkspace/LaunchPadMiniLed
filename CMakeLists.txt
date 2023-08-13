@@ -19,9 +19,9 @@ FetchContent_MakeAvailable(rtmidi)
 #        )
 add_library(launch_pad_mini_led SHARED Sources/LedController.cpp Sources/Include/LedController.h)
 
-# Spécifie le chemin d'inclusion pour cette bibliothèque lorsqu'elle est utilisée par d'autres projets.
 target_include_directories(launch_pad_mini_led PUBLIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/Sources/Include
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/Sources/Include>
+        $<INSTALL_INTERFACE:include>
         )
 
 target_link_libraries(launch_pad_mini_led PRIVATE rtmidi)
