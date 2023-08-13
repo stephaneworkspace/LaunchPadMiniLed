@@ -17,10 +17,10 @@ FetchContent_MakeAvailable(rtmidi)
 #        Sources/LedController.cpp
 #        Sources/LedController.h
 #        )
-add_library(launch_pad_mini_led SHARED Sources/LedController.cpp Sources/Include/LedController.h)
+add_library(launch_pad_mini_led SHARED Sources/LedController.cpp Sources/LedController.h)
 
 target_include_directories(launch_pad_mini_led PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/Sources/Include>
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/Sources>
         $<INSTALL_INTERFACE:include>
         )
 

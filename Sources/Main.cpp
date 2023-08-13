@@ -2,7 +2,7 @@
 // Created by Stéphane on 06.08.23.
 //
 
-#include "Include/LedController.h"
+#include "LedController.h"
 
 int main() {
     LedController controller;
