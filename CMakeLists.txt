@@ -13,8 +13,10 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(rtmidi)
 
-add_executable(launch_pad_mini_led Sources/Main.cpp
-        Sources/LedController.cpp
-        Sources/LedController.h
-        )
+#add_executable(launch_pad_mini_led Sources/Main.cpp
+#        Sources/LedController.cpp
+#        Sources/LedController.h
+#        )
+add_library(launch_pad_mini_led SHARED Sources/LedController.cpp)
+
 target_link_libraries(launch_pad_mini_led PRIVATE rtmidi)
